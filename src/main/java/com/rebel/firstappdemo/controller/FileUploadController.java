@@ -22,7 +22,7 @@ public class FileUploadController {
         convertFile.createNewFile();
         FileOutputStream fout = new FileOutputStream(convertFile);
         fout.write(file.getBytes());
-        fout.close();;
+        fout.close();
         return  "File is upload successfully";
     }
 }
