@@ -17,8 +17,8 @@ public class FileUploadController {
     @RequestMapping(value = "/upload",method = RequestMethod.POST,
     consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 
-    public String fileUpload(@RequestParam("file")MultipartFile file) throws IOException{
-        File convertFile = new File("/var/tmp/"+file.getOriginalFilename());
+    public String fileUpload(@RequestParam("file") MultipartFile file) throws IOException{
+        File convertFile = new File("D:\\WordCount\\var\\temp\\"+file.getOriginalFilename());
         convertFile.createNewFile();
         FileOutputStream fout = new FileOutputStream(convertFile);
         fout.write(file.getBytes());

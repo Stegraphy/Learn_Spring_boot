@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 public class FileDownloadController {
     @RequestMapping(value = "/download", method = RequestMethod.GET)
     public ResponseEntity<Object> downloadFile() throws FileNotFoundException {
-        String filename = "/var/temp/numberone.jpg";
+        String filename = "D:\\WordCount\\var\\temp\\back.jpg";
         File file = new File(filename);
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
         HttpHeaders headers = new HttpHeaders();
